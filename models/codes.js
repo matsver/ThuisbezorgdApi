@@ -14,7 +14,12 @@ var Code = mongoose.model('Code', {
   usedAt: {
     type: Number,
     default: null
-  }
+  },
+   __v: {
+     type: Number,
+     select: false
+   },
+   
 });
 
 module.exports = {
