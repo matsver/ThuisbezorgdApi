@@ -4,6 +4,7 @@ var Code = mongoose.model('Code', {
   text: {
     type: String,
     required: true,
+    minlength: 3,
     trim: true
   },
   used: {
@@ -11,9 +12,11 @@ var Code = mongoose.model('Code', {
     default: false
   },
   usedAt: {
-    type: number,
+    type: Number,
     default: null
   }
 });
 
-module.exports = {Code};
+module.exports = {
+  Code
+};
